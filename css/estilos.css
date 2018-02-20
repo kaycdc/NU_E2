@@ -1,3 +1,8 @@
+*
+{
+  margin: 0;
+}
+
 body
 {
   font-family: 'Dancing Script';
@@ -9,11 +14,17 @@ img
  box-shadow: 2px 2px #02010a;
 }
 
+#contenido
+{
+  width: 900px;
+	margin: 0 auto;
+  min-height: 200px;
+}
+
 nav ul
 {
-  float: right;
   list-style: none;
-  margin: 0 auto;
+  margin: auto;
 }
 
 nav li
@@ -37,16 +48,30 @@ header
   color: white;
   text-shadow: 2px 2px 2px #02010a;
   border-radius: 10px 10px 0px 0px;
-  margin: 0px 50px 0px 50px;
-  padding: 2px;
+  padding: 15px 0px;
   animation: animacion 1s;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+}
+
+.titulo
+{
+  width: 70%;
+  text-indent: 15px;
+}
+
+.menu
+{
+  width: 30%;
+  font-size: 18pt;
 }
 
 .central
 {
   background-color: #82c3a6;
-  padding: 0;
-  margin: 0px 50px 0px 50px;
+  padding: 20px;
 }
 
 .central > figure
@@ -59,6 +84,7 @@ header
 {
   background-color: #d5c75f;
   color: #02010a;
+  padding: 10px;
   text-align: center;
   text-decoration: underline;
   display: -webkit-flex;
@@ -66,7 +92,6 @@ header
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
   border: 1px;
-  margin: 0 50px;
 }
 
 #paisa img:hover
@@ -91,7 +116,6 @@ header
   text-align: center;
   border: 1px;
   padding: 10px;
-  margin: 0 50px;
   display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
@@ -113,23 +137,16 @@ header
   filter: sepia(90%);
 }
 
-.g1, .g2, .g3, .g4, .g5, .g6
-{
-  width: 30%;
-  padding: 15px;
-}
-
 footer
 {
   background-color: #c6d5c5;
   border-radius: 0px 0px 10px 10px;
-  margin: 0px 50px 30px 50px;
   text-align: center;
   display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 footer a:link, footer a:visited
@@ -151,6 +168,15 @@ footer a:link, footer a:visited
 
 @media (max-width:900px)
 {
+  #contenido{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .titulo, .menu{
+    width: 100%;
+    text-align: center;
+  }
+
   .bloque1, .bloque2
   {
     width: 100%;
@@ -159,47 +185,12 @@ footer a:link, footer a:visited
   .f1, .f2, .f3, .f4
   {
     width: 100%;
+    padding: 5px;
   }
 
-  .g1
+  .g1, .g2, .g3, .g4, .g5, .g6
   {
     width: 100%;
-    order: 1;
-  }
-
-  .g2
-  {
-    width: 100%;
-    order: 2;
-  }
-
-  .g3
-  {
-    width: 100%;
-    order: 3;
-  }
-
-  .g4
-  {
-    width: 100%;
-    order: 4;
-  }
-
-  .g5
-  {
-    width: 100%;
-    order: 5;
-  }
-
-  .g6
-  {
-    width: 100%;
-    order: 6;
-  }
-
-  footer, header, .central, .secundaria
-  {
-    margin: 0;
   }
 }
 
@@ -215,4 +206,9 @@ footer a:link, footer a:visited
     width: 25%;
   }
 
+  .g1, .g2, .g3, .g4, .g5, .g6
+  {
+    width: 30%;
+    padding: 12px;
+  }
 }
